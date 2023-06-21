@@ -1,0 +1,32 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "../Desktop/axios-1.x/examples"
+		},
+		{
+			"path": "../Desktop/axios-1.x/lib"
+		},
+		{
+			"path": "../Desktop/axios-1.x/sandbox"
+		},
+		{
+			"path": "../Desktop/axios-1.x/templates"
+		},
+		{
+			"path": "../Desktop/axios-1.x/test"
+		},
+		{
+			"path": "../Desktop/axios-1.x/.github"
+		},
+		{
+			"path": "../Desktop/axios-1.x/bin"
+		},
+		{
+			"path": "../Desktop/axios-1.x/dist"
+		}
+	],
+	"settings": {}
+}
