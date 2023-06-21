@@ -1,6 +1,5 @@
-.item {
+.item01 {
   padding: 4px 8px;
-  transition: background-color 0.4s;
 }
 
 .is-active {

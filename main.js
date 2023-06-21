@@ -2,13 +2,12 @@ Vue.config.devtools = true;
 var app = new Vue({
   el:'#app',
   data: {
-    classObject: {
-      child: true,
-      'is-active': true
-    },
-    styleObject: {
-      color: 'red',
-      backgroundColor: 'lightblue'
+    item: {
+      id: 1,
+      class: 'item01',
+      width: 200,
+      height: 200,
+      style: 'background-color: lightblue;',
     }
   }
 })
