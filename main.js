@@ -2,20 +2,13 @@ Vue.config.devtools = true;
 var app = new Vue({
   el:'#app',
   data: {
-    count: 0,
-    isChild: true,
-    isActive: true,
-    textColor: 'red',
-    bgColor: 'lightgray',
-    message: {
-      value: 'Hello Vue.js!'
+    classObject: {
+      child: true,
+      'is-active': true
     },
-    list: ['りんご', 'ばなな', 'いちご'],
-    num: 1
-  },
-  methods: {
-    increment: function() {
-      this.count += 1
+    styleObject: {
+      color: 'red',
+      backgroundColor: 'lightblue'
     }
   }
 })
