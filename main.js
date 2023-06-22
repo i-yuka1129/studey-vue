@@ -9,8 +9,8 @@ var app = new Vue({
     ]
   },
   methods: {
-    upDate: function(index) {
-      this.$set(this.list, 0, { id: 1, name: 'キングスライム', hp:500})
+    doAttack: function(index) {
+      this.list[index].hp -= 10
     }
   }
 })
