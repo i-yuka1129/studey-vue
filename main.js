@@ -5,8 +5,8 @@ var app = new Vue({
     message: 'Hello Vue,js',
   },
   methods: {
-    handleInput: function(event) {
-      this.message = event.target.value
+    handler: function(comment) {
+      console.log(comment)
     }
   }
 })
