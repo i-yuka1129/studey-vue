@@ -9,7 +9,7 @@ var app = new Vue({
     ]
   },
   mounted: function() {
-    console.log(this.$el)
+    console.log(this.$refs.hello)
   },
   created: function() {
     this.list.forEach(function(item) {
