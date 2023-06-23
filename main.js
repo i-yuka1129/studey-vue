@@ -5,8 +5,8 @@ var app = new Vue({
     message: 'Hello Vue,js',
   },
   methods: {
-    handler: function(comment) {
-      console.log(comment)
+    doDelete: function() {
+      console.log('削除')
     }
   }
 })
