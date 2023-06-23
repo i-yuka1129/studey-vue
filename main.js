@@ -2,24 +2,7 @@ Vue.config.devtools = true;
 var app = new Vue({
   el:'#app',
   data: {
-    list: [
-      { id: 1, name: 'スライム', hp: 100},
-      { id: 2, name: 'ゴブリン', hp: 200},
-      { id: 3, name: 'ドラゴン', hp: 500},
-    ]
+    url: 'https://cr-vue.mio3io.com/guide/',
+    message: 'Vue.js',
   },
-  methods: {
-    handleClick() {
-      var count = this.$refs.count
-      if (count) {
-        count.innerText = parseInt(count.innerText, 10) + 1
-      }
-    }
-  },
-  created: function() {
-    this.list.forEach(function(item) {
-      this.$set(item, 'active', false)
-    }, this)
-    this.$set(this.list, 1, { id: 1, name: 'キングスライム', hp: 500})
-  }
 })
