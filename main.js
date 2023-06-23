@@ -8,8 +8,13 @@ var app = new Vue({
       { id: 3, name: 'ドラゴン', hp: 500},
     ]
   },
-  mounted: function() {
-    console.log(this.$refs.hello)
+  methods: {
+    handleClick() {
+      var count = this.$refs.count
+      if (count) {
+        count.innerText = parseInt(count.innerText, 10) + 1
+      }
+    }
   },
   created: function() {
     this.list.forEach(function(item) {
