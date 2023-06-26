@@ -4,10 +4,15 @@
   <meta charset="utf-8">
   <title>Vue.js App</title>
   <link href="main.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/smooth-scroll@12.1.5"></script>
 </head>
 <body>
   <div id="app">
-    <input type="text" v-model.trim="price"> {{ price }}
+    <!-- <div class="content">...</div>
+    <div v-on:click="scro;;Top">ページ上部へ移動</div> -->
+    <header v-bind:class="{ compact: scrollY > 200}">
+      200pxより下にスクロールしたら.compactを付与
+    </header>
   </div>
   <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
   <script src="main.js"></script>
