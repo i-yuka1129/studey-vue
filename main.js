@@ -2,11 +2,11 @@ Vue.config.devtools = true;
 var app = new Vue({
   el:'#app',
   data: {
-    price: 19800
+    message: 'Hello'
   },
   filters: {
-    localeNum: function (val) {
-      return val.toLocaleString()
+    filter: function(message, foo, num) {
+      console.log(message, foo, num)
     }
   }
 })
