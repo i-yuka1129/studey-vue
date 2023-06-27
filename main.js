@@ -2,17 +2,22 @@ Vue.config.devtools = true;
 var app = new Vue({
   el:'#app',
   data: {
-    width: 100,
-    height: 200
-  },
-  computed: {
-    watchTarget: function() {
-      return [this.width, this.height]
-    }
+    list: [],
+    current: '',
+    topics: [
+      { value: 'vue', name: 'Vue.js'},
+      { value: 'jQuery', name: 'jQuery'},
+    ]
   },
   watch: {
-    watchTarget: function() {
-      console.log('変更されました')
+    current: function(val) {
+      axios.get('https://api.github.com/search/repositories', {
+        params: {
+          q: 'topic' + val
+        }
+      }).then(function (response) {
+        this.list = response.data.items
+      }.bind(this))
     }
   }
 })
