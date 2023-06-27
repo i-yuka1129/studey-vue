@@ -2,6 +2,7 @@ Vue.config.devtools = true;
 var app = new Vue({
   el:'#app',
   data: {
+    order: false,
     // フォームの入力と紐づけるデータ
     budget: 300,
     // 表示件数
@@ -21,8 +22,11 @@ var app = new Vue({
         return el.price <= this.budget
       }, this)
     },
+    sorted: function() {
+      return _.orderBy(this.matched, 'price', this.order ? 'desc' : 'asc')
+    },
     limited: function() {
-      return this.matched.slice(0, this.limit)
+      return this.sorted.slice(0, this.limit)
     }
   }
 })
