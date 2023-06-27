@@ -8,38 +8,9 @@
 </head>
 <body>
   <div id="app">
-    <main id="top">
-
-			<nav>
-				<h1>Smooth Scroll</h1>
-				<p><a href="https://github.com/cferdinandi/smooth-scroll">GitHub</a></p>
-				<hr>
-			</nav>
-
-			<section>
-
-				<p>
-				    .<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>
-				    .<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>
-				    .<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>
-				    .<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>
-				    .<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>
-				    .<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>
-				    .<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>
-				    .<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.<br>.
-				</p>
-
-				<p><a href="#">Back to the top</a></p>
-			</section>
-		</main>
+    <p>{{ width }}の半分は{{ halfWidth }}</p>
   </div>
   <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
   <script src="main.js"></script>
-  <script>
-    // Instantiate Scrolls
-    var scroll = new SmoothScroll('a[href*="#"]', {
-      topOnEmptyHash: false
-    });
-  </script>
 </body>
 </html>
