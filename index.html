@@ -8,9 +8,7 @@
 </head>
 <body>
   <div id="app">
-    <ul>
-      <li v-for="item in list" v-bind:key="item.id">{{ item.name }} {{ item.price }}円</li>
-    </ul>
+    <input type="text" v-model="value">
   </div>
   <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
   <script src="main.js"></script>
