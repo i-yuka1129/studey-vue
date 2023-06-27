@@ -5,13 +5,13 @@ var app = new Vue({
     width: 800
   },
   computed: {
-    halfWidth: {
-      get: function() {
-        return this.width / 2
-      },
-      set: function(value) {
-        this.width = value * 2
-      }
+    computedData: function() {
+      return Math.random() 
+    }
+  },
+  methods: {
+    methodsData: function() {
+      return Math.random() 
     }
   }
 })
