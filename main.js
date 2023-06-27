@@ -2,12 +2,17 @@ Vue.config.devtools = true;
 var app = new Vue({
   el:'#app',
   data: {
-    value: '編集してみてね'
+    width: 100,
+    height: 200
+  },
+  computed: {
+    watchTarget: function() {
+      return [this.width, this.height]
+    }
   },
   watch: {
-    value: _.debounce(function(newVal) {
-      console.log(newVal)
-    },
-    500)
+    watchTarget: function() {
+      console.log('変更されました')
+    }
   }
 })
