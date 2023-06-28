@@ -1,13 +1,17 @@
 Vue.config.devtools = true;
 
 Vue.component('comp-child', {
-  template: '<p id="child" class="child">Child</p>',
-  // props: ['val']
+  template: '<li>{{ name }} HP.{{ hp }}</li>',
+  props: ['name', 'hp']
 })
 
 new Vue({
   el:'#app',
   data: {
-    message: 'Hello'
+    list: [
+      { id: 1, name: 'スライム', hp: 100},
+      { id: 2, name: 'ゴブリン', hp: 300},
+      { id: 3, name: 'ドラゴン', hp: 500}
+    ]
   }
 })
