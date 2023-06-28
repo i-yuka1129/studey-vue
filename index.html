@@ -7,10 +7,7 @@
 </head>
 <body>
   <div id="app">
-    <comp-child v-for="item in list"
-    v-bind:key="item.id"
-    v-bind:name="item.name"
-    v-bind:hp="item.hp"></comp-child>
+  <example v-bind:value="value"></example>
   </div>
   <script src="https://cdn.jsdelivr.net/npm/axios@0.17.1/dist/axios.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
