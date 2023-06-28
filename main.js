@@ -1,12 +1,17 @@
 Vue.config.devtools = true;
 
-var myComponent = {
-  template: '<p>MyComponent</p>'
-}
+Vue.component('my-component', {
+  template: '<p>{{ message }}</p>',
+  data: function() {
+    return {
+      message: 'Hello'
+    }
+  },
+  methods: {
+    
+  }
+})
 
 new Vue({
   el:'#app',
-  components: {
-    'my-component': myComponent
-  }
 })
