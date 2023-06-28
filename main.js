@@ -1,17 +1,13 @@
 Vue.config.devtools = true;
 
-Vue.component('my-component', {
-  template: '<p>{{ message }}</p>',
-  data: function() {
-    return {
-      message: 'Hello'
-    }
-  },
-  methods: {
-    
-  }
+Vue.component('comp-child', {
+  template: '<p id="child" class="child">Child</p>',
+  // props: ['val']
 })
 
 new Vue({
   el:'#app',
+  data: {
+    message: 'Hello'
+  }
 })
