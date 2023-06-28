@@ -1,18 +1,19 @@
 Vue.config.devtools = true;
 
-function Cat(name) {
-  this.name = name
-}
-
-Vue.component('example', {
-  props: {
-    val: Cat
+Vue.component('comp-child', {
+  template: '<button v-on:click="handleClick">イベント発火</button>',
+  methods: {
+    handleClick: function () {
+      this.$emit('childs-event')
+    }
   }
 })
 
 new Vue({
   el:'#app',
-  data: {
-    value: new Cat('たま')
+  methods: {
+    parentMethods: function () {
+      alert('イベントをキャッチ！')
+    }
   }
 })
