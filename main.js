@@ -1,15 +1,12 @@
 Vue.config.devtools = true;
-var app = new Vue({
+
+var myComponent = {
+  template: '<p>MyComponent</p>'
+}
+
+new Vue({
   el:'#app',
-  data: {
-    list: []
-  },
-  watch: {
-    list: function() {
-      console.log('通常', this.$refs.list.offsetHeight)
-      this.$nextTick(function() {
-        console.log('nextTick', this.$refs.list.offsetHeight)
-      })
-    }
+  components: {
+    'my-component': myComponent
   }
 })
