@@ -1,8 +1,23 @@
 Vue.config.devtools = true;
 
-Vue.component('comp-child', {
-  template: '<li>{{ name }} HP.{{ hp }}\
-  <button v-on:click="doAttack">攻撃する</button></li>',
+var bus = new Vue({
+  data: {
+    count: 0
+  }
+})
+
+Vue.component('component-b', {
+  template: '<p>{{ bus.count }}</p>',
+  computed: {
+    bus: function () {
+      return bus.$data
+    }
+  },
+  created: function () {
+    bus.$on('bus-event', function () {
+      this.count++
+    })
+  },
   props: {
     id: Number,
     name: String,
