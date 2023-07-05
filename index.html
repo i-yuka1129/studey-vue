@@ -7,15 +7,7 @@
 </head>
 <body>
   <div id="app">
-    <div class="comp-child">
-      <slot text="Hello"></slot>
-    </div>
-
-    <comp-child>
-      <template v-slot:defalut="slotProps">
-        {{ slotProps.text }}
-      </template>
-    </comp-child>
+    <my-calender v-model="data"></my-calender>
   </div>
   <script src="https://cdn.jsdelivr.net/npm/axios@0.17.1/dist/axios.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
