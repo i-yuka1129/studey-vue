@@ -8,9 +8,8 @@
 <body>
   <div id="app">
     <my-component>
-      <template functional>
-        <p>functional</p>
-      </template>
+      <button v-on:click="current^=1">change component</button>
+      <div v-bind:is="component"></div>
     </my-component>
   </div>
   <script src="https://cdn.jsdelivr.net/npm/axios@0.17.1/dist/axios.min.js"></script>
