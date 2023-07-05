@@ -1,29 +1,40 @@
 Vue.config.devtools = true;
 
-Vue.component('my-calender', {
-  // model: {
-  //   // 現在の値をvalueではなくcurrentに割り当てる
-  //   prop: 'current',
-  //   // イベントをchangeに割り当てる
-  //   event: 'change'
-  // },
-  // // propsでcurrentを受け取る
-  // props: {
-  //   current: String
-  // },
-  // created: function() {
-  //   this$emit('change', '2023-07-01')
-  // }
-  template: '<div class="my-calender">{{ value }}</div>',
-  props: { value: String },
-  created: function () {
-    this.$emit('input', '2023-07-01')
+Vue.component('my-component', {
+  template: '<div class="my-component">\
+  <p>名前.{{ name }} HP.{{ hp }}</p>\
+  <p>名前 <input v-model="localName"></p>\
+  <p>HP <input size="5" v-model.number="localHp"></p>\
+  </div>',
+  props: {
+    name: String,
+    hp: Number
+  },
+  computed: {
+    // 算出プロパティのセッター＆ゲッターを使ってv-modelを使用
+    localName: {
+      get: function () {
+        return this.name
+      },
+      set: function (val) {
+        this.$emit('update:name', val)
+      }
+    },
+    localHp: {
+      get: function () {
+        return this.hp
+      },
+      set: function (val) {
+        this.$emit('update:hp', val)
+      }
+    }
   }
 })
 
 new Vue({
-  el:'#app',
+  el: '#app',
   data: {
-
+    name: 'スライム',
+    hp: 100
   }
 })
