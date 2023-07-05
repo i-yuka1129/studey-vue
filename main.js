@@ -1,10 +1,23 @@
 Vue.config.devtools = true;
 
+var mixin = {
+  created: function () {
+    this.hello()
+  },
+  methods: {
+    hello: function () {
+      console.log('hello from mixin!')
+    }
+  }
+}
+
 Vue.component('my-component-a', {
-  template: '<div class="my-component-a">component A</div>'
+  mixin: [mixin],
+  template: '<p>MyComponentA</p>'
 })
 Vue.component('my-component-b', {
-  template: '<div class="my-component-b">component B</div>'
+  mixin: [mixin],
+  template: '<p>MyComponentB</p>'
 })
 
 new Vue({
