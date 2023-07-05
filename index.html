@@ -7,11 +7,14 @@
 </head>
 <body>
   <div id="app">
+    <div class="comp-child">
+      <slot text="Hello"></slot>
+    </div>
+
     <comp-child>
-      <header slot="header">
-        Hello Vue.js
-      </header>
-      Vue.jsはJavascriptのフレームワークです。
+      <template v-slot:defalut="slotProps">
+        {{ slotProps.text }}
+      </template>
     </comp-child>
   </div>
   <script src="https://cdn.jsdelivr.net/npm/axios@0.17.1/dist/axios.min.js"></script>
