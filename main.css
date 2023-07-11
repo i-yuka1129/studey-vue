@@ -1,0 +1,9 @@
+/* 1秒かけて透明に */
+.v-enter-active, .v-leave-active {
+  transition: opacity 1s;
+}
+
+/* 見えなくなる時の透明度 */
+.v-enter, .v-leave-to {
+  opacity: 0;
+}
