@@ -8,11 +8,11 @@
 <body>
   <div id="app">
     <p><button v-on:click="show=!show">切り替え</button></p>
-    <transiton>
+    <transition name="demo">
       <div v-show="show">
         トランジションさせたい要素
       </div>
-    </transiton>
+    </transition>
   </div>
   <script src="https://cdn.jsdelivr.net/npm/axios@0.17.1/dist/axios.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
