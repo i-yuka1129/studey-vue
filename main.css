@@ -1,9 +1,9 @@
 /* 1秒かけて透明に */
-.demo-enter-active, .demo-leave-active {
+.v-enter-active, .v-leave-active {
   transition: opacity 1s;
 }
 
 /* 見えなくなる時の透明度 */
-.demo-enter, .demo-leave-to {
+.v-enter, .v-leave-to {
   opacity: 0;
 }
