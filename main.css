@@ -1,20 +1,5 @@
-/* 以下はボックス要素のスタイル */
-.list {
-  width: 240px;
-  padding: 0;
-}
-.item {
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  margin: 4px;
-  width: 40px;
-  height: 40px;
-  background: #f5f5f5;
-}
-
 /* トランジション用スタイル */
-.v-enter-active, .v-leave-active, .v-move {
+.v-enter-active, .v-leave-active {
   transition: all 1s;
 }
 
@@ -24,6 +9,5 @@
 
 .v-enter, .v-leave-to {
   opacity: 0;
-  background: #f9a3b1;
-  transform: translateY(-30px);
+  transform: translateX(-20px);
 }
