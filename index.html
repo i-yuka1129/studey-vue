@@ -9,19 +9,15 @@
 
   <div id="app">
     <p>
-      <button v-on:click="show=!show">切り替え</button>
+      <button v-on:click="doShuffle">シャッフル</button>
+      <button v-on:click="doAdd">追加</button>
     </p>
-      <transition
-      v-on:before-enter="beforeEnter"
-      v-on:enter="enter"
-      v-on:after-enter="afterEnter"
-      v-on:enter-cancelled="enterCancelled"
-      v-on:before-leave="beforeLeave"
-      v-on:leave="leave"
-      v-on:after-leave="afterLeave"
-      v-on:leave-cancelled="leaveCancelled">
-        <div v-if="show">example</div>
-      </transition>
+    <transition-group tag="ul" class="list" v-on:click="beforeLeave">
+      <li v-for="(item, index) in list"
+        v-bind:key="item"
+        class="item"
+        v-on:click="doRemove(index)">{{ item }}</li>
+    </transition-group>
   </div>
 
   <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.5/lodash.min.js"></script>

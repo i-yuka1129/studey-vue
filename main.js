@@ -3,35 +3,24 @@ Vue.config.devtools = true;
 new Vue({
   el: '#app',
   data: {
-    show: true
+    list: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
   },
   methods: {
-    beforeEnter: function() {
-      console.log('before-enter')
+    doShuffle: function () {
+      this.list = _.shuffle(this.list)
     },
-    enter: function (el, done) {
-      console.log('enter')
-      setTimeout(done, 1000)
+    doAdd: function() {
+      var newNumber = Math.max.apply(null, this.list) + 1
+      var index = Math.floor(Math.random() * (this.list.length + 1))
+      this.list.splice(index, 0, newNumber)
     },
-    afterEnter: function (el) {
-      console.log('after-enter')
+    doRemove: function (index) {
+      this.list.splice(index, 1)
     },
-    enterCancelled: function (el) {
-      console.log('enter-cancelled')
-    },
-    // Leave
-    beforeLeave: function (el) {
-      console.log('before-leave')
-    },
-    leave: function (el, done) {
-      console.log('leave')
-      setTimeout(done, 1000)
-    },
-    afterLeave: function (el) {
-      console.log('after-leave')
-    },
-    leaveCancelled: function (el) {
-      console.log('leave-cancelled')
+    beforeLeave: function(el) {
+      var style = window.getComputedStyle(el)
+      el.style.left = el.offsetLeft - parseFloat(style.marginLeft, 10) + 'px'
+      el.style.top = el.offsetTop - parseFloat(style.marginTop, 10) + 'px'
     }
   }
 })
