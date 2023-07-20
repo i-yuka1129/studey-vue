@@ -1,13 +1,3 @@
-.v-enter-active {
-  transition: opacity 1s;
-}
-
-.v-leave-active {
-  transition: opacity 0.8s ease 0.2s;
-  position: absolute;
-}
-
-.v-enter,
-.v-leave-to {
-  opacity: 0;
+.v-move {
+  transition: transform 1s;
 }
