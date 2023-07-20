@@ -3,6 +3,6 @@ Vue.config.devtools = true;
 new Vue({
   el: '#app',
   data: {
-    show: true
+    count: 0
   }
 })

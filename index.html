@@ -6,32 +6,14 @@
   <link href="main.css" rel="stylesheet">
 </head>
 <body>
+
   <div id="app">
-    <p><button v-on:click="show=!show">切り替え</button></p>
-    <div class="flex">
-      <div class="box">
-        <p>normal</p>
+    <p><button v-on:click="count++">切り替え</button></p>
         <transition>
-          <div v-if="show" key="a">TRUE</div>
-          <div v-else key="b">FALSE</div>
+          <div v-bind:key="count">{{ count }}</div>
         </transition>
-      </div>
-      <div class="box">
-        <p>out-in</p>
-        <transition mode="out-in">
-          <div v-if="show" key="c">TRUE</div>
-          <div v-else key="d">FALSE</div>
-        </transition>
-      </div>
-      <div class="box">
-        <p>in-out</p>
-        <transition mode="in-out">
-          <div v-if="show" key="e">TRUE</div>
-          <div v-else key="f">FALSE</div>
-        </transition>
-      </div>
-    </div>
   </div>
+
   <script src="https://cdn.jsdelivr.net/npm/axios@0.17.1/dist/axios.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
   <script src="main.js"></script>

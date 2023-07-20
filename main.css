@@ -1,21 +1,13 @@
-.v-enter-active,
-.v-leave-active {
+.v-enter-active {
   transition: opacity 1s;
 }
 
-/* .v-leave-active {
+.v-leave-active {
+  transition: opacity 0.8s ease 0.2s;
   position: absolute;
-} */
+}
 
 .v-enter,
 .v-leave-to {
   opacity: 0;
-}
-
-.flex {
-  display: flex;
-}
-
-.box {
-  border: 1px solid #333;
 }
