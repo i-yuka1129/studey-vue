@@ -1,5 +1,9 @@
 Vue.config.devtools = true;
 
+import Example from 'Example.js'
+
+console.log(Example.count)
+
 new Vue({
   el: '#app',
   data: {
