@@ -1,3 +1,3 @@
 Vue.config.devtools = true;
 
-const newArray = array.map((el, index) => el * 2)
+const newArray = array.map(el => ({ value: el * 2}))
