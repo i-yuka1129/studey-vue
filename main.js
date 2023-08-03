@@ -1,7 +1,8 @@
 Vue.config.devtools = true;
 
-const array = [1, 2, 3]
-// バラバラの3つの引数として渡す
-myFunction(...array)
-// arrayを展開して4を加えた新しい一次配列を作成
-const newArray = [...array, 4] 
+const array = [
+  { id: 1, name: 'りんご' },
+  { id: 2, name: 'ばなな' }
+]
+const result = array.find(el => el.id === 2)
+console.log(result)
