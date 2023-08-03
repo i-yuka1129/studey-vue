@@ -1,13 +1,7 @@
 Vue.config.devtools = true;
 
-const [a, b] = [1, 2]
-console.log(a)
-
-
-const {name} = { id:1, name: 'りんご'}
-console.log(name)
-
-function myFunction({ id, name }) {
-  console.log(name) // -> りんご
-}
-myFunction({ id: 1, name: 'りんご' })
+const array = [1, 2, 3]
+// バラバラの3つの引数として渡す
+myFunction(...array)
+// arrayを展開して4を加えた新しい一次配列を作成
+const newArray = [...array, 4] 
