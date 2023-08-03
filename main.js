@@ -1,7 +1,5 @@
 Vue.config.devtools = true;
 
-new Vue({
-  methods: {
-    handleClick() { ... }
-  }
+const newArray = array.map(el => {
+  return el * 2
 })
